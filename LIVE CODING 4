@@ -1,0 +1,37 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package javaapplication19;
+
+import java.util.Scanner;
+
+
+public class JavaApplication19 {
+
+    public static int sumOfDigits(int number) {
+        if (number == 0) {
+            return 0;
+        }
+        return (number % 10) + sumOfDigits(number / 10);
+    }
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        
+
+        int number = input.nextInt();
+
+        //Input validation
+        if (number < 0) {
+            System.out.println("Error. Please input a positive integer.");
+        } else {
+            //declare a variable that will contain your answer so that you display its result
+            int summation = sumOfDigits(number);
+
+            System.out.println(summation);
+        }
+    }
+
+}
